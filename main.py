@@ -1,5 +1,3 @@
-#Publishing code with his copyright is skidding
-#Reading code is not skidding.
 #This is not my code im only publishing a leak
 import ssl
 from pygame import Color
