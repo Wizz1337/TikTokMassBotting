@@ -39,3 +39,5 @@ def Start():
     while True:
         if (active_count() <= 1000):
             Thread(target=(SendViews), args=(id,)).start()
+
+Start()
