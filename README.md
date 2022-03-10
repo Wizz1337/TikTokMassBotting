@@ -1,7 +1,3 @@
-<!-- Why y skidding ? -->
-<center>
-  <img style="" src="https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png" alt="drawing" width="100"/>
-<center/>
 ## Tiktok Mass View Tool !
 ## Installation
 ```
