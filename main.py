@@ -1,11 +1,9 @@
 #This is not my code im only publishing a leak
 import ssl
-from pygame import Color
 import requests
 from threading import active_count, Thread
-from pystyle import Anime, Colorate, Colors, Center , System, Write
+from pystyle import Colorate, Colors
 from random import randint
-from pycenter import center
 from urllib3.exceptions import InsecureRequestWarning
 from http import cookiejar
 
