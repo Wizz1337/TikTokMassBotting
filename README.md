@@ -4,7 +4,7 @@
   <b>💎TMV {TikTok Mass View Bot}</b>
   <br>
   <br>
-  <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png'>
+  <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="100">
 </p>
 
 ## Installation
