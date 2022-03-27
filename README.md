@@ -13,6 +13,5 @@
 
 ##  Contact:
 ```css
-  * Discord : ＄XK＄#1337
   * Telegram : @xin1337w
 ```
