@@ -5,7 +5,8 @@
   <br>
   <br>
   <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="300">
-  <b>�Slow but working with proxy</b>
+  <br><br>
+  <b>Slow but working with proxy</b>
 </p>
 
 ## Installation
