@@ -1,5 +1,3 @@
-#This is not my code im only publishing a leak
-#Edited by xin1337
 import ssl, os, requests
 from threading import active_count, Thread
 from pystyle import Colorate, Colors, Write
@@ -17,12 +15,15 @@ class BlockCookies(cookiejar.CookiePolicy):
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 DeviceTypes                       = ["SM-G9900", "sm-g950f", "SM-A136U1", "SM-M225FV", "SM-E426B", "SM-M526BR", "SM-M326B", "SM-A528B", "SM-F711B", "SM-F926B", "SM-A037G", "SM-A225F", "SM-M325FV", "SM-A226B", "SM-M426B", "SM-A525F"]
-Platforms                         = ["android", "windows", "ios"]
+Platforms                         = ["android", "windows", "ios", "iphone"]
+Channel                           = ["tiktok_web", "googleplay", "App%20Store"]
+ApiDomain                         = ["api19.tiktokv.com", "api.toutiao50.com", "api19.toutiao50.com"]
 r                                 = requests.Session()
 ThreadCount                       = 0
 TotalSendedView                   = 0
 TotalFailedReq                    = 0
-
+ShareChoice                       = True
+ViewChoice                        = True
 
 r.cookies.set_policy(BlockCookies())
 
@@ -40,8 +41,8 @@ def ReadFile(filename,method):
         return content
 
 def SendView(item_id, proxy, timeout, proxytype):
-    global TotalSendedView, TotalFailedReq
-    proxy         = {proxytype: f'{proxytype}://{proxy}'}
+    global TotalSendedView, TotalFailedReq, ShareChoice, ViewChoice
+    proxy         = {f'{proxytype}': f'{proxytype}://{proxy}'}
     platform      = choice(Platforms)
     osVersion     = randint(1, 12)
     DeviceType    = choice(DeviceTypes)
@@ -51,14 +52,21 @@ def SendView(item_id, proxy, timeout, proxytype):
                     }
     appName       = choice(["tiktok_web", "musically_go"])
     Device_ID     = randint(1000000000000000000, 9999999999999999999)
-    apiDomain     = choice(["api19.tiktokv.com", "api.toutiao50.com", "api19.toutiao50.com"])
-    channelLol    = choice(["tiktok_web", "googleplay"])
+    apiDomain     = choice(ApiDomain)
+    channelLol    = choice(Channel)
     URI           = f"https://{apiDomain}/aweme/v1/aweme/stats/?channel={channelLol}&device_type={DeviceType}&device_id={Device_ID}&os_version={osVersion}&version_code=220400&app_name={appName}&device_platform={platform}&aid=1988"
-    Data          = f"item_id={item_id}&play_delta=1"
+    Data          = f"item_id={item_id}"
+
+    if ShareChoice == True:
+        Data += "&share_delta=1"
+    else:
+        pass
+    
+    if ViewChoice == True:
+        Data += "&play_delta=1"
 
     try:
         req = r.post(URI, headers=headers, data=Data, proxies=proxy,timeout=timeout, stream=True, verify=False)
-
         try:
             if (req.json()["status_code"] == 0):
                 TotalFailedReq += 1
@@ -67,7 +75,7 @@ def SendView(item_id, proxy, timeout, proxytype):
                 pass
         except:
             TotalSendedView += 1
-            print(Colorate.Horizontal(Colors.green_to_white, f"Sended View: {TotalSendedView}"))
+            print(Colorate.Horizontal(Colors.green_to_white, f"Sended View/Share: {TotalSendedView}"))
             os.system(f"title Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
     except:
         pass
@@ -80,12 +88,24 @@ def ClearURI(link):
 
 if (__name__ == "__main__"):
     Clear()
-    proxy     = ReadFile("Proxies.txt", 'r')
-    itemID    = Write.Input("Video Link > ", Colors.red_to_purple, interval=0.0001)
-    amount    = Write.Input("Amount (0=inf) > ", Colors.red_to_purple, interval=0.0001)
-    Proxytype = Write.Input("Proxy Type > ", Colors.red_to_purple, interval=0.0001)
-    Timeout   = Write.Input("Proxy Timeout > ", Colors.red_to_purple, interval=0.0001)
-    NThread   = Write.Input("Thread Amount > ", Colors.red_to_purple, interval=0.0001)
+    proxy        = ReadFile("Proxies.txt", 'r')
+    itemID       = Write.Input("Video Link > ", Colors.red_to_purple, interval=0.0001)
+    amount       = Write.Input("Amount (0=inf) > ", Colors.red_to_purple, interval=0.0001)
+    Proxytype    = Write.Input("Proxy Type > ", Colors.red_to_purple, interval=0.0001)
+    Timeout      = Write.Input("Proxy Timeout > ", Colors.red_to_purple, interval=0.0001)
+    NThread      = Write.Input("Thread Amount > ", Colors.red_to_purple, interval=0.0001)
+    ShareChoice  = Write.Input("Want Share [y/n] > ", Colors.red_to_purple, interval=0.0001)
+    ViewChoice   = Write.Input("Want View [y/n] > ", Colors.red_to_purple, interval=0.0001)
+
+    if ShareChoice.lower().startswith("y"):
+        ShareChoice = True
+    elif ShareChoice.lower().startswith("n"):
+        ShareChoice = False
+
+    if ViewChoice.lower().startswith("y"):
+        ViewChoice = True
+    elif ViewChoice.lower().startswith("n"):
+        ViewChoice = False
 
     itemID = ClearURI(itemID)
 
