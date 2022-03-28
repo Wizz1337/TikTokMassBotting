@@ -6,7 +6,6 @@
   <br>
   <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="300">
   <br><br>
-  <b>Slow but working with proxy</b>
 </p>
 
 ## Star ⭐ if you want more
@@ -33,6 +32,13 @@
   * enter proxy type you put in Proxies.txt
   * enter proxy timeout | choose 3 if you want a good timeout
   * enter thread | more thread = faster but make your computer slower | choose 100~1000
+```
+
+## Tricks
+```js
+  * Use on vps (Faster !)
+  * Run 3 times one with http proxy type, one with socks4 proxy type and same for socks5
+  * Get more than 1k proxy
 ```
 
 ##  Credits:
