@@ -1,7 +1,7 @@
-<h1 align="center">💎TMV</h1>
+<h1 align="center">💎TMB</h1>
 
 <p align='center'>
-  <b>💎TMV {TikTok Mass View Bot}</b>
+  <b>💎TMV {TikTok Mass Bot}</b>
   <br>
   <br>
   <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="300">
@@ -10,6 +10,14 @@
 </p>
 
 ## Star ⭐ if you want more
+
+## Features
+```js
+  * View botting
+  * Share botting
+  * Fast
+  * Easy to use
+```
 
 ## Installation
 ```
