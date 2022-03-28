@@ -9,6 +9,8 @@
   <b>Slow but working with proxy</b>
 </p>
 
+## Star ⭐ if you want more
+
 ## Installation
 ```
   * pip install requests pystyle fake_useragent
