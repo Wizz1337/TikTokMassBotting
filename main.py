@@ -4,8 +4,7 @@ from pystyle import Colorate, Colors, Write
 from random import randint, choice
 from urllib3.exceptions import InsecureRequestWarning
 from http import cookiejar
-from fake_useragent import UserAgent
-
+from UserAgent import UserAgent
 
 class BlockCookies(cookiejar.CookiePolicy):
     return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
@@ -24,6 +23,7 @@ TotalSendedView                   = 0
 TotalFailedReq                    = 0
 ShareChoice                       = True
 ViewChoice                        = True
+DebugMode                         = False
 
 r.cookies.set_policy(BlockCookies())
 
@@ -33,7 +33,17 @@ def Clear():
     elif os.name in ('ce', 'nt', 'dos'):
         os.system('cls')
     else:
-        print("\n") * 120
+        pass
+
+def Title(Content):
+    global DebugMode
+    if os.name == 'posix':
+        return True
+    elif os.name in ('ce', 'nt', 'dos'):
+        os.system(f"title {Content}")
+        return False
+    else:
+        pass
 
 def ReadFile(filename,method):
     with open(filename,method,encoding='utf8') as f:
@@ -41,14 +51,14 @@ def ReadFile(filename,method):
         return content
 
 def SendView(item_id, proxy, timeout, proxytype):
-    global TotalSendedView, TotalFailedReq, ShareChoice, ViewChoice
+    global TotalSendedView, TotalFailedReq, ShareChoice, ViewChoice, DebugMode
     proxy         = {f'{proxytype}': f'{proxytype}://{proxy}'}
     platform      = choice(Platforms)
     osVersion     = randint(1, 12)
     DeviceType    = choice(DeviceTypes)
     headers       = {
                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                        "user-agent": UserAgent().random
+                        "user-agent": choice(UserAgent)
                     }
     appName       = choice(["tiktok_web", "musically_go"])
     Device_ID     = randint(1000000000000000000, 9999999999999999999)
@@ -70,13 +80,16 @@ def SendView(item_id, proxy, timeout, proxytype):
         try:
             if (req.json()["status_code"] == 0):
                 TotalFailedReq += 1
-                os.system(f"title Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
+                if DebugMode == True:
+                    print(Colorate.Horizontal(Colors.red_to_white, f"Fail : {TotalFailedReq}"))
+                else:
+                    Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
             else:
                 pass
         except:
             TotalSendedView += 1
             print(Colorate.Horizontal(Colors.green_to_white, f"Sended View/Share: {TotalSendedView}"))
-            os.system(f"title Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
+            Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
     except:
         pass
 
@@ -96,6 +109,13 @@ if (__name__ == "__main__"):
     NThread      = Write.Input("Thread Amount > ", Colors.red_to_purple, interval=0.0001)
     ShareChoice  = Write.Input("Want Share [y/n] > ", Colors.red_to_purple, interval=0.0001)
     ViewChoice   = Write.Input("Want View [y/n] > ", Colors.red_to_purple, interval=0.0001)
+    
+    if Title("a") == True:
+        Debug = Write.Input("Debug Fails [y/n] ? > ", Colors.red_to_purple, interval=0.0001)
+        if Debug.lower().startswith("y"):
+            DebugMode = True
+        else:
+            DebugMode = False
 
     if ShareChoice.lower().startswith("y"):
         ShareChoice = True
