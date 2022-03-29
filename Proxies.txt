@@ -1,3 +1,7 @@
+public
+or
+private
 proxy
+put
 like
 that
