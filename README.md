@@ -14,13 +14,13 @@
 ```js
   * View botting
   * Share botting
-  * Fast
-  * Easy to use
+  * Easy to use, Fast
+  * Compatible Linux / Win / (didnt tested for macos)
 ```
 
 ## Installation
 ```
-  * pip install requests pystyle fake_useragent
+  * pip install requests pystyle
 ```
 
 ##  Usage:
