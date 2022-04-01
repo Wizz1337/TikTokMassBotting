@@ -1,10 +1,10 @@
-import ssl, os, requests
+import ssl, os, requests, time
 from threading import active_count, Thread
 from pystyle import Colorate, Colors, Write
 from random import randint, choice
 from urllib3.exceptions import InsecureRequestWarning
 from http import cookiejar
-from UserAgent import UserAgent
+from Data.UserAgent import UserAgent
 
 class BlockCookies(cookiejar.CookiePolicy):
     return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
@@ -37,9 +37,9 @@ def Clear():
 
 def Title(Content):
     global DebugMode
-    if os.name == 'posix':
-        return True
-    elif os.name in ('ce', 'nt', 'dos'):
+    if os.name in ('posix', 'ce', 'dos'):
+        pass
+    elif os.name == 'nt':
         os.system(f"title {Content}")
         return False
     else:
@@ -49,6 +49,20 @@ def ReadFile(filename,method):
     with open(filename,method,encoding='utf8') as f:
         content = [line.strip('\n') for line in f]
         return content
+
+def ReadProxiesFile():
+    restartTry = True
+    Path = "./Data/Proxies.txt"
+    while restartTry:
+        try:
+            proxies = ReadFile(Path, 'r')
+            restartTry = False
+            return proxies
+        except:
+            print(Colorate.Horizontal(Colors.red_to_white, f"Failed to open Proxies.txt"))
+            Path = Write.Input("Proxies Path > ", Colors.red_to_purple, interval=0.0001)
+            restartTry = True
+
 
 def SendView(item_id, proxy, timeout, proxytype):
     global TotalSendedView, TotalFailedReq, ShareChoice, ViewChoice, DebugMode
@@ -101,21 +115,24 @@ def ClearURI(link):
 
 if (__name__ == "__main__"):
     Clear()
-    proxy        = ReadFile("Proxies.txt", 'r')
     itemID       = Write.Input("Video Link > ", Colors.red_to_purple, interval=0.0001)
     amount       = Write.Input("Amount (0=inf) > ", Colors.red_to_purple, interval=0.0001)
+    ScrapProxie  = Write.Input("Scrap Proxies [y/n] > ", Colors.red_to_purple, interval=0.0001)
     Proxytype    = Write.Input("Proxy Type > ", Colors.red_to_purple, interval=0.0001)
     Timeout      = Write.Input("Proxy Timeout > ", Colors.red_to_purple, interval=0.0001)
     NThread      = Write.Input("Thread Amount > ", Colors.red_to_purple, interval=0.0001)
     ShareChoice  = Write.Input("Want Share [y/n] > ", Colors.red_to_purple, interval=0.0001)
     ViewChoice   = Write.Input("Want View [y/n] > ", Colors.red_to_purple, interval=0.0001)
     
-    if Title("a") == True:
+    if Title("Proy Scrapper X-Proxy by NightFallGT") == True:
         Debug = Write.Input("Debug Fails [y/n] ? > ", Colors.red_to_purple, interval=0.0001)
         if Debug.lower().startswith("y"):
             DebugMode = True
         else:
             DebugMode = False
+
+    if ScrapProxie.lower().startswith("y"):
+        from Data.ScrapProxie import Start; Start()
 
     if ShareChoice.lower().startswith("y"):
         ShareChoice = True
@@ -144,6 +161,8 @@ if (__name__ == "__main__"):
             ProxyChoose = True
             print("Invalid Proxy Type | Choose : Http, Socks4, Socks5")
             Proxytype = Write.Input("Proxy Type > ", Colors.red_to_purple, interval=0.0001)
+
+    proxy = ReadProxiesFile()
 
     if (int(amount) == 0):
         while True:
