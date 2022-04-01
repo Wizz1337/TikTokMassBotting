@@ -1,3 +1,10 @@
+## ChangeLog 02/04/22
+```c
+  * Added Proxy Scrapper
+  * Moved Files to ./Data/
+  * Fixed Proxies.txt not found for linux
+```
+
 ## ChangeLog 29/03/22
 ```c
   * Fixed UserAgent Errors
