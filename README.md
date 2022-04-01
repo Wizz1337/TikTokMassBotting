@@ -4,7 +4,7 @@
   <b>💎TMV {TikTok Mass Bot}</b>
   <br>
   <br>
-  <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="300">
+  <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="250">
   <br><br>
 </p>
 
@@ -16,11 +16,12 @@
   * Share botting
   * Easy to use, Fast
   * Compatible Linux / Win / (didnt tested for macos)
+  * Proxy Scrapper integrated
 ```
 
 ## Installation
 ```
-  * pip install requests pystyle
+  * pip install requests pystyle requests
 ```
 
 ##  Usage:
@@ -38,7 +39,6 @@
 ```js
   * Use on vps (Faster !)
   * Run 3 times one with http proxy type, one with socks4 proxy type and same for socks5
-  * Get more than 1k proxy
 ```
 
 ##  Credits:
