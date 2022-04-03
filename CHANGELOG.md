@@ -1,3 +1,12 @@
+## ChangeLog 03/04/22
+```c
+  * Divized to to python file
+  * ShareBot is not patched so you can make a lot of share
+  * Added List.py
+  * Added more device type (apple products)
+  * Added a little advanced debug for Share bot
+```
+
 ## ChangeLog 02/04/22
 ```c
   * Added Proxy Scrapper
