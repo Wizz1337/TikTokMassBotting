@@ -1,14 +1,11 @@
-<h1 align="center">💎TMB</h1>
+<h1 align="center">💎TMB {TikTok Mass Bot}</h1>
 
 <p align='center'>
-  <b>💎TMV {TikTok Mass Bot}</b>
-  <br>
-  <br>
-  <img src='https://icones.pro/wp-content/uploads/2021/03/logo-icone-tiktok-simbolo.png' width="250">
-  <br><br>
+  <b>Star ⭐ if you want more</b><br>
+  <b>Imagine selling that lol</b><br>
+  <img src='https://cdn.discordapp.com/attachments/949848871838822484/960133104012525568/unknown.png' width="250">
 </p>
 
-## Star ⭐ if you want more
 
 ## Features
 ```js
