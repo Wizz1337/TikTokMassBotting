@@ -13,7 +13,7 @@
 ## Features
 ```js
   * View botting
-  * Share botting
+  * Share botting (not patched you can do a ton of share)
   * Easy to use, Fast
   * Compatible Linux / Win / (didnt tested for macos)
   * Proxy Scrapper integrated
@@ -21,13 +21,13 @@
 
 ## Installation
 ```
-  * pip install requests pystyle requests
+  * pip install requests pystyle
 ```
 
 ##  Usage:
 ```
   * put proxy in Proxies.txt file
-  * python main.py
+  * python <ShareBot.py or ViewBot.py>
   * paste video url
   * choose amount
   * enter proxy type you put in Proxies.txt
