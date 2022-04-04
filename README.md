@@ -2,8 +2,6 @@
 
 <p align='center'>
   <b>Star ⭐ if you want more</b><br>
-  <b>Imagine selling that lol</b><br>
-  <img src='https://cdn.discordapp.com/attachments/949848871838822484/960133104012525568/unknown.png' width="250">
 </p>
 
 
