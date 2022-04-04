@@ -38,6 +38,11 @@
   * Run 3 times one with http proxy type, one with socks4 proxy type and same for socks5
 ```
 
+## Scammers
+```js
+  * yezzjoestar#0001 / 923211134901841982 | Selling tool for 20E
+```
+
 ##  Credits:
 
  > Xin1337 / Wizz1337 :<br>
