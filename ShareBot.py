@@ -148,7 +148,5 @@ if (__name__ == "__main__"):
                     Thread(target=(SendView), args=(itemID,choice(proxy),int(Timeout),Proxytype,)).start()
     else:
        for _ in range(int(amount)):
-            Run = True
-            while Run:
-                if (active_count() <= int(NThread)):
-                    Thread(target=(SendView), args=(itemID,choice(proxy),Timeout,Proxytype,)).start()
+            if (active_count() <= int(NThread)):
+                Thread(target=(SendView), args=(itemID,choice(proxy),Timeout,Proxytype,)).start()
