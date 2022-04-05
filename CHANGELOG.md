@@ -1,6 +1,7 @@
 ## ChangeLog 04/04/22
 ```c
   * Fixed amount not egal to entered amount
+  * Removed Proxy for Share Proxy (Fastest now)
 ```
 
 ## ChangeLog 03/04/22
