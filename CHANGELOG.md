@@ -1,3 +1,8 @@
+## ChangeLog 04/04/22
+```c
+  * Fixed amount not egal to entered amount
+```
+
 ## ChangeLog 03/04/22
 ```c
   * Divized to to python file
