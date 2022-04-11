@@ -9,7 +9,7 @@ def Title(Content):
     if os.name in ('posix', 'ce', 'dos'):
         print(Colorate.Horizontal(Colors.red_to_purple, f"{Content}"))
     elif os.name == 'nt':
-        os.system(f"title {Content}")
+        print(Colorate.Horizontal(Colors.red_to_purple, f"{Content}"))
         return False
     else:
         pass
