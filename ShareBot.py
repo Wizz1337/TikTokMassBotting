@@ -112,7 +112,7 @@ if (__name__ == "__main__"):
                     except:
                         pass
     else:
-       for _ in range(int(amount)):
+       while TotalSendedView < int(amount):
             if (active_count() <= int(NThread)):
                 try:
                     Thread(target=(SendView), args=(itemID,)).start()
