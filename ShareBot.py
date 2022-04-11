@@ -107,8 +107,14 @@ if (__name__ == "__main__"):
             Run = True
             while Run:
                 if (active_count() <= int(NThread)):
-                    Thread(target=(SendView), args=(itemID,)).start()
+                    try:
+                        Thread(target=(SendView), args=(itemID,)).start()
+                    except:
+                        pass
     else:
        for _ in range(int(amount)):
             if (active_count() <= int(NThread)):
-                Thread(target=(SendView), args=(itemID,)).start()
+                try:
+                    Thread(target=(SendView), args=(itemID,)).start()
+                except:
+                    pass
