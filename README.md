@@ -38,7 +38,10 @@
 
 ## Scammers
 ```js
-  * yezzjoestar#0001 / 923211134901841982 | Selling tool for 20E
+  * yezzjoestar#0001   | 923211134901841982    | Selling tool for 20E
+  * Biloo#8484         | 963482748914384957    | Skid
+  * Uhky#0001          | 955883575604019310    | Skid + Veski
+  * ΞZIR#0001          | 962708528118767646    | Skid
 ```
 
 ##  Credits:
