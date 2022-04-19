@@ -42,6 +42,7 @@
   * Biloo#8484         | 963482748914384957    | Skid
   * Uhky#0001          | 955883575604019310    | Skid + Veski
   * ΞZIR#0001          | 962708528118767646    | Skid
+  * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20E (friend of yezzjoestar)
 ```
 
 ##  Credits:
