@@ -44,6 +44,9 @@
   * ΞZIR#0001          | 962708528118767646    | Skid
   * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20E (friend of yezzjoestar)
   * Luxs#0002          | 646941764032397313    | Skid + Selling tool for 20$
+  * Krsxz#0001         | 954372342887378944    | Skid (guild id : 965193120700596244)
+  * hz#3623            | 933330648373006406    | Skid (guild id : 960149739268112454)
+
 ```
 
 ##  Credits:
