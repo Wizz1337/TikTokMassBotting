@@ -43,6 +43,7 @@
   * Uhky#0001          | 955883575604019310    | Skid + Veski
   * ΞZIR#0001          | 962708528118767646    | Skid
   * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20E (friend of yezzjoestar)
+  * Luxs#0002          | 646941764032397313    | Skid + Selling tool for 20$
 ```
 
 ##  Credits:
