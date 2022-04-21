@@ -104,11 +104,7 @@ def ClearURI(link):
 
 if (__name__ == "__main__"):
     Clear()
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"PATCHED"))
+    print(Colorate.Horizontal(Colors.red_to_white, f"Working But Slow !"))
     itemID       = Write.Input("Video Link > ", Colors.red_to_purple, interval=0.0001)
     amount       = Write.Input("Amount (0=inf) > ", Colors.red_to_purple, interval=0.0001)
     ScrapProxie  = Write.Input("Scrap Proxies [y/n] > ", Colors.red_to_purple, interval=0.0001)
