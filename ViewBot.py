@@ -142,13 +142,19 @@ if (__name__ == "__main__"):
 
     proxy = ReadProxiesFile()
 
-    if (int(amount) == 0):
+    if int(amount) == 0:
         while True:
             Run = True
             while Run:
-                if (active_count() <= int(NThread)):
-                    Thread(target=(SendView), args=(itemID,choice(proxy),int(Timeout),Proxytype,)).start()
+                if active_count() <= int(NThread):
+                    try:
+                        Thread(target=(SendView), args=(itemID,choice(proxy),int(Timeout),Proxytype,)).start()
+                    except:
+                        pass
     else:
        while TotalSendedView < int(amount):
-            if (active_count() <= int(NThread)):
-                Thread(target=(SendView), args=(itemID,choice(proxy),Timeout,Proxytype,)).start()
+            if active_count() <= int(NThread):
+                try:
+                    Thread(target=(SendView), args=(itemID,choice(proxy),Timeout,Proxytype,)).start()
+                except:
+                    pass
