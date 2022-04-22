@@ -49,6 +49,8 @@
   * 151k#6661          | 814508737745911878    | Skid & Selling
   * Lekkas#9751        | 938092182819176511    | Skid & Selling (Guild ID: 951470783077679104)
   * zrh#2000           | 840699051103617084    | Skid & Sellibng  (Guild ID: 940236490691182632)
+  
+  Thanks to github.com/b6m | github.com/00a1 for tracking these skids & scammers !
 ```
 
 ##  Credits:
