@@ -49,7 +49,7 @@
   * 151k#6661          | 814508737745911878    | Skid & Selling
   * Lekkas#9751        | 938092182819176511    | Skid & Selling (Guild ID: 951470783077679104)
   * zrh#2000           | 840699051103617084    | Skid & Sellibng  (Guild ID: 940236490691182632)
-  * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5E
+  * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5E (Guild ID: 964576860648378438)
   * https://github.com/moxy-code/TikTok-Share-Bot
   * https://github.com/CrystalEU/ShareBot-Tiktok
   * https://github.com/zenty404/TikTok_Share_Bot
