@@ -50,6 +50,17 @@
   * Lekkas#9751        | 938092182819176511    | Skid & Selling (Guild ID: 951470783077679104)
   * zrh#2000           | 840699051103617084    | Skid & Sellibng  (Guild ID: 940236490691182632)
   * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5E
+  * https://github.com/moxy-code/TikTok-Share-Bot
+  * https://github.com/CrystalEU/ShareBot-Tiktok
+  * https://github.com/zenty404/TikTok_Share_Bot
+  * https://github.com/gsventu/Tiktok-Share-Bot
+  * https://github.com/ladas2000/tiktok-sharebot | no Credit
+  * https://github.com/CrystalEU/Viewbot-Tiktok
+  * https://github.com/2wz/tiktok-shares-bot
+  * https://github.com/floppa1337/Tiktok-Sharebot
+  * https://github.com/dos-argenta/TikTokShareBot-SpiritOfStalker
+  * https://github.com/drezhack/TikTok-Shares
+  * https://github.com/KazamaOnGithub/TikTok_ShareBoost
   
   Thanks to github.com/b6m | github.com/00a1 for tracking these skids & scammers !
 ```
