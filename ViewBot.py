@@ -83,16 +83,13 @@ def SendView(item_id, proxy, timeout, proxytype):
         try:
             if (req.json()["status_code"] == 0):
                 TotalFailedReq += 1
-                if DebugMode == True:
-                    print(Colorate.Horizontal(Colors.red_to_white, f"Fail : {TotalFailedReq}"))
-                else:
-                    Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
+                Title(f"Thread :{str(active_count()-1)} / Total Try :{TotalFailedReq}")
             else:
                 pass
         except:
             TotalSendedView += 1
             print(Colorate.Horizontal(Colors.green_to_white, f"Sended View/Share: {TotalSendedView}"))
-            Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedView} / Fail :{TotalFailedReq}")
+            Title(f"Thread :{str(active_count()-1)} / Total Try :{TotalFailedReq}")
     except:
         pass
 
@@ -141,6 +138,9 @@ if (__name__ == "__main__"):
             Proxytype = Write.Input("Proxy Type > ", Colors.red_to_purple, interval=0.0001)
 
     proxy = ReadProxiesFile()
+    
+    print(Colorate.Horizontal(Colors.red_to_white, f"Hit are not counted"))
+    print(Colorate.Horizontal(Colors.red_to_white, f"Bot Started check your video view in 5 minute !"))
 
     if int(amount) == 0:
         while True:
