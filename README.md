@@ -39,16 +39,17 @@
 ## Scammers
 ```js
   * yezzjoestar#0001   | 923211134901841982    | Selling tool for 20E
-  * Biloo#8484         | 963482748914384957    | Skid
+  * Biloo#8484         | 963482748914384957    | Skid + Veski
   * Uhky#0001          | 955883575604019310    | Skid + Veski
-  * ΞZIR#0001          | 962708528118767646    | Skid
+  * ΞZIR#0001          | 962708528118767646    | Skid + Veski
   * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20E (friend of yezzjoestar)
   * Luxs#0002          | 646941764032397313    | Skid + Selling tool for 20$
-  * Krsxz#0001         | 954372342887378944    | Skid (Guild ID: 965193120700596244)
-  * hz#3623            | 933330648373006406    | Skid (Guild ID: 960149739268112454)
+  * Krsxz#0001         | 954372342887378944    | Skid + Veski (Guild ID: 965193120700596244)
+  * hz#3623            | 933330648373006406    | Skid + Veski (Guild ID: 960149739268112454)
   * 151k#6661          | 814508737745911878    | Skid & Selling
   * Lekkas#9751        | 938092182819176511    | Skid & Selling (Guild ID: 951470783077679104)
   * zrh#2000           | 840699051103617084    | Skid & Sellibng  (Guild ID: 940236490691182632)
+  * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5E
   
   Thanks to github.com/b6m | github.com/00a1 for tracking these skids & scammers !
 ```
