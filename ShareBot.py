@@ -17,8 +17,8 @@ class BlockCookies(cookiejar.CookiePolicy):
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 r = requests.Session()
-ThreadCount = 0
-SentTotalSentShares = 0
+ThreadCount = 150
+SentTotalSentShares = 580000000
 TotalFailedReq = 0
 DebugMode = False
 
@@ -87,7 +87,7 @@ def SendView(item_id):
         pass
 
 
-def ClearURI(link):
+def ClearURI(link):https://vt.tiktok.com/ZSdDWRoTU/
     if "vm.tiktok.com" in itemID or "vt.tiktok.com" in itemID:
         return \
         r.head(itemID, stream=True, verify=False, allow_redirects=True, timeout=5).url.split("/")[5].split("?", 1)[0]
