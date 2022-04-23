@@ -18,7 +18,7 @@ requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 r = requests.Session()
 ThreadCount = 0
-TotalSendedShare = 0
+SentTotalSentShares = 0
 TotalFailedReq = 0
 DebugMode = False
 
@@ -52,7 +52,7 @@ def ReadFile(filename, method):
 
 
 def SendView(item_id):
-    global TotalSendedShare, TotalFailedReq, DebugMode
+    global SentTotalSentShares, TotalFailedReq, DebugMode
     platform = choice(Platforms)
     osVersion = randint(1, 12)
     DeviceType = choice(DeviceTypes)
@@ -72,17 +72,17 @@ def SendView(item_id):
         try:
             if req.json()["status_code"] == 0:
                 impr_id = req.json()["log_pb"]["impr_id"]
-                TotalSendedShare += 1
+                SentTotalSentShares += 1
                 if DebugMode:
-                    print(Colorate.Horizontal(Colors.green_to_white, f"Sended Share: {TotalSendedShare} ({impr_id})"))
+                    print(Colorate.Horizontal(Colors.green_to_white, f"Sent Share: {SentTotalSentShares} ({impr_id})"))
                 else:
-                    print(Colorate.Horizontal(Colors.green_to_white, f"Sended Share: {TotalSendedShare} ({impr_id})"))
-                    Title(f"Thread :{str(active_count() - 1)} / Hit :{TotalSendedShare} / Fail :{TotalFailedReq}")
+                    print(Colorate.Horizontal(Colors.green_to_white, f"Sent Share: {SentTotalSentShares} ({impr_id})"))
+                    Title(f"Thread :{str(active_count() - 1)} / Hit :{SentTotalSentShares} / Fail :{TotalFailedReq}")
             else:
                 pass
         except:
             TotalFailedReq += 1
-            Title(f"Thread :{str(active_count() - 1)} / Hit :{TotalSendedShare} / Fail :{TotalFailedReq}")
+            Title(f"Thread :{str(active_count() - 1)} / Hit :{SentTotalSentShares} / Fail :{TotalFailedReq}")
     except:
         pass
 
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                     except:
                         pass
     else:
-        while TotalSendedShare < int(amount):
+        while SentTotalSentShares < int(amount):
             if active_count() <= int(NThread):
                 try:
                     Thread(target=SendView, args=(itemID,)).start()
