@@ -3,9 +3,11 @@ from threading import active_count, Thread
 from pystyle import Colorate, Colors, Write
 from random import randint, choice
 from urllib3.exceptions import InsecureRequestWarning
+from urllib.parse import urlparse
 from http import cookiejar
 from Data.UserAgent import UserAgent
 from Data.Lists import DeviceTypes, Platforms, Channel, ApiDomain
+import sys
 
 class BlockCookies(cookiejar.CookiePolicy):
     return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
@@ -34,8 +36,10 @@ def Clear():
 
 def Title(Content):
     global DebugMode
-    if os.name in ('posix', 'ce', 'dos'):
-        pass
+    if os.name == 'posix':
+        sys.stdout.write(f"\33]0;{Content}\a")
+        sys.stdout.flush()
+        return False
     elif os.name == 'nt':
         os.system(f"title {Content}")
         return False
@@ -94,10 +98,15 @@ def SendView(item_id, proxy, timeout, proxytype):
         pass
 
 def ClearURI(link):
-    if ("vm.tiktok.com" in itemID or "vt.tiktok.com" in itemID):
-        return r.head(itemID, stream=True, verify=False, allow_redirects=True, timeout=5).url.split("/")[5].split("?", 1)[0]
+    ParsedURL = urlparse(itemID)
+    host = ParsedURL.hostname.lower()
+    #print(itemID)
+    if "vm.tiktok.com" == host or "vt.tiktok.com" == host:
+        UrlParsed = urlparse(r.head(itemID, stream=True, verify=False, allow_redirects=True, timeout=5).url)
+        return UrlParsed.path.split("/")[3]
     else:
-        return itemID.split("/")[5].split("?", 1)[0]
+        UrlParsed = urlparse(itemID)
+        return UrlParsed.path.split("/")[3]
 
 if (__name__ == "__main__"):
     Clear()
