@@ -5,6 +5,7 @@
 </p>
 
 Join here if you need help ! https://discord.gg/RHZkC3PAhJ
+Also 250 star = release new one with x10 faster !
 
 ## Features
 ```js
