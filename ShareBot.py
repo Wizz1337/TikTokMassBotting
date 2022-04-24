@@ -20,7 +20,7 @@ requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 r = requests.Session()
 ThreadCount = 0
-SentTotalSentShares = 0
+SentTotalSentShares = 999999999
 TotalFailedReq = 0
 DebugMode = False
 
