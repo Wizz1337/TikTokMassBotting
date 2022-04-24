@@ -8,7 +8,7 @@ from http import cookiejar
 from Data.UserAgent import UserAgent
 from Data.Lists import DeviceTypes, Platforms, Channel, ApiDomain
 import sys
-
+https://www.tiktok.com/@nekatrafi/video/7089382827057253633?is_from_webapp=1&sender_device=pc&web_id=6957259642813269506
 
 class BlockCookies(cookiejar.CookiePolicy):
     return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
@@ -19,8 +19,8 @@ class BlockCookies(cookiejar.CookiePolicy):
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 r = requests.Session()
-ThreadCount = 0
-SentTotalSentShares = 0
+ThreadCount = 250
+SentTotalSentShares = 3000000000
 TotalFailedReq = 0
 DebugMode = False
 
