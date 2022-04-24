@@ -164,6 +164,6 @@ if (__name__ == "__main__"):
        while TotalSendedView < int(amount):
             if active_count() <= int(NThread):
                 try:
-                    Thread(target=(SendView), args=(itemID,choice(proxy),Timeout,Proxytype,)).start()
+                    Thread(target=(SendView), args=(itemID,choice(proxy),int(Timeout),Proxytype,)).start()
                 except:
                     pass
