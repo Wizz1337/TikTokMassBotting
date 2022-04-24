@@ -3,9 +3,11 @@ from threading import active_count, Thread
 from pystyle import Colorate, Colors, Write
 from random import randint, choice
 from urllib3.exceptions import InsecureRequestWarning
+from urllib.parse import urlparse
 from http import cookiejar
 from Data.UserAgent import UserAgent
 from Data.Lists import DeviceTypes, Platforms, Channel, ApiDomain
+import sys
 
 
 class BlockCookies(cookiejar.CookiePolicy):
@@ -36,8 +38,10 @@ def Clear():
 
 def Title(Content):
     global DebugMode
-    if os.name in ('posix', 'ce', 'dos'):
-        pass
+    if os.name == 'posix':
+        sys.stdout.write(f"\33]0;{Content}\a")
+        sys.stdout.flush()
+        return False
     elif os.name == 'nt':
         os.system(f"title {Content}")
         return False
@@ -51,7 +55,7 @@ def ReadFile(filename, method):
         return content
 
 
-def SendView(item_id):
+def SendShare(item_id):
     global SentTotalSentShares, TotalFailedReq, DebugMode
     platform = choice(Platforms)
     osVersion = randint(1, 12)
@@ -88,12 +92,15 @@ def SendView(item_id):
 
 
 def ClearURI(link):
-    if "vm.tiktok.com" in itemID or "vt.tiktok.com" in itemID:
-        return \
-        r.head(itemID, stream=True, verify=False, allow_redirects=True, timeout=5).url.split("/")[5].split("?", 1)[0]
+    ParsedURL = urlparse(itemID)
+    host = ParsedURL.hostname.lower()
+    #print(itemID)
+    if "vm.tiktok.com" == host or "vt.tiktok.com" == host:
+        UrlParsed = urlparse(r.head(itemID, stream=True, verify=False, allow_redirects=True, timeout=5).url)
+        return UrlParsed.path.split("/")[3]
     else:
-        return itemID.split("/")[5].split("?", 1)[0]
-
+        UrlParsed = urlparse(itemID)
+        return UrlParsed.path.split("/")[3]
 
 if __name__ == "__main__":
     Clear()
@@ -116,13 +123,13 @@ if __name__ == "__main__":
             while Run:
                 if active_count() <= int(NThread):
                     try:
-                        Thread(target=SendView, args=(itemID,)).start()
+                        Thread(target=SendShare, args=(itemID,)).start()
                     except:
                         pass
     else:
         while SentTotalSentShares < int(amount):
             if active_count() <= int(NThread):
                 try:
-                    Thread(target=SendView, args=(itemID,)).start()
+                    Thread(target=SendShare, args=(itemID,)).start()
                 except:
                     pass
