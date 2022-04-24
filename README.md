@@ -64,6 +64,8 @@ Join here if you need help ! https://discord.gg/RHZkC3PAhJ
   * https://github.com/dos-argenta/TikTokShareBot-SpiritOfStalker
   * https://github.com/drezhack/TikTok-Shares
   * https://github.com/KazamaOnGithub/TikTok_ShareBoost
+  * https://github.com/voxiq/tiktok-auto-share
+  * https://github.com/useragents/TikTok-Share-Botter
   
   Thanks to github.com/b6m | github.com/00a1 for tracking these skids & scammers !
 ```
