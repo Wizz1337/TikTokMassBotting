@@ -3,13 +3,12 @@ import time
 import queue
 import threading
 from random import randint, choice
-from weakref import ProxyType
 from urllib3.exceptions import InsecureRequestWarning
 from urllib.parse import urlparse
 from http import cookiejar
 
 import requests
-from pystyle import Colorate, Colors, Write
+from pystyle import Colorate, Colors, Write, Add, Center
 
 from Data.UserAgent import UserAgent
 from Data.Lists import DeviceTypes, Platforms, Channel, ApiDomain
@@ -28,6 +27,28 @@ sentRequests                      = 0
 completed                         = False
 
 r.cookies.set_policy(BlockCookies())
+def Banner():
+    clearConsole()
+    Banner1 = r"""
+╔╦╗  ╦  ╦╔═  ╔═╗  ╦ ╦  ╔═╗  ╦═╗  ╔═╗
+ ║   ║  ╠╩╗  ╚═╗  ╠═╣  ╠═╣  ╠╦╝  ║╣ 
+ ╩   ╩  ╩ ╩  ╚═╝  ╩ ╩  ╩ ╩  ╩╚═  ╚═╝
+        discord.gg/devcenter
+"""
+
+    Banner2 = r"""
+  ,           ,
+ /             \
+((__-^^-,-^^-__))
+ `-_---' `---_-'
+  <__|o` 'o|__>
+     \  `  /
+      ): :(
+      :o_o:
+       "-" 
+       """
+
+    print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, Add.Add(Banner2, Banner1, center=True), 2)))
 
 def sendView():
     proxy         = {f'{proxyType}': f'{proxyType}://{choice(proxyList)}'}
@@ -110,17 +131,15 @@ def progressThread():
         print(f"{sentRequests} sent requests! {elapsedReq} requests/second.", end="\r")
 
 if (__name__ == "__main__"):
-    clearConsole()
-    print(Colorate.Horizontal(Colors.red_to_white, f"Bot is working but slow!"))
-    videoURL     = Write.Input("Video Link > ", Colors.red_to_purple, interval=0.0001)
-    sendType     = Write.Input("[0] - Views\n[1] - Shares > ", Colors.red_to_purple, interval=0.0001)
-    amount       = int(Write.Input("Amount (0=inf) > ", Colors.red_to_purple, interval=0.0001))
-    nThreads     = int(Write.Input("Thread Amount > ", Colors.red_to_purple, interval=0.0001))
-    itemID = clearURL(videoURL)
-
-    proxyChoose = True
+    clearConsole(); Banner()
+    VideoURI     = str(Write.Input("Video Link > ", Colors.yellow_to_red, interval=0.0001))
+    amount       = int(Write.Input("Amount (0=inf) > ", Colors.yellow_to_red, interval=0.0001))
+    nThreads     = int(Write.Input("Thread Amount > ", Colors.yellow_to_red, interval=0.0001)); clearConsole(); Banner()
+    sendType     = int(Write.Input("[0] - Views\n[1] - Shares > ", Colors.yellow_to_red, interval=0.0001)); clearConsole(); Banner()
+    itemID       = clearURL(VideoURI)
+    proxyChoose  = True
     while proxyChoose:
-        proxyType = Write.Input("Select proxy type:\n[0] - http\n[1] - socks4\n[2] - socks5 > ", Colors.red_to_purple, interval=0.0001)
+        proxyType = Write.Input("Select proxy type:\n[0] - http\n[1] - socks4\n[2] - socks5 > ", Colors.yellow_to_red, interval=0.0001)
         if proxyType == "0":
             proxyType = "http"
             proxyChoose = False
@@ -132,14 +151,17 @@ if (__name__ == "__main__"):
             proxyChoose = False
 
     proxyList = readProxiesFile()
-    
-    print(Colorate.Horizontal(Colors.red_to_white, f"Hits are not counted"))
-    print(Colorate.Horizontal(Colors.red_to_white, f"Bot started! Check your video view in 5 minutes !"))
+    clearConsole(); Banner()
 
-    if sendType == "0":
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Hits are not counted"))
+    print(Colorate.Horizontal(Colors.yellow_to_red, f"Bot started! Check your video stats in 5 minutes !"))
+
+    if sendType == 0:
         sendProcess = sendView
-    elif sendType == "1":
+    elif sendType == 1:
         sendProcess = sendShare
+    else:
+        print(f"Error {sendType}")
 
     threading.Thread(target=countThread).start()
     threading.Thread(target=progressThread).start()
