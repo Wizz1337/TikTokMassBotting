@@ -1,5 +1,6 @@
 # All code from NightFallGT <3
 # https://github.com/NightfallGT/X-Proxy
+from importlib.resources import path
 import threading, re, requests, os
 from pystyle import Colorate, Colors
 lock = threading.Lock()
@@ -145,5 +146,6 @@ def Start():
     print(Colorate.Horizontal(Colors.red_to_purple, f"Length without duplicates : {len(clean_output)}"))
 
     print(Colorate.Horizontal(Colors.red_to_purple, f"Saved to Proxies.txt"))
+    path = os.path.join("Data", "Proxies.txt")
     p.file_write('./Data/Proxies.txt', clean_output)
     
