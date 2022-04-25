@@ -4,7 +4,7 @@
   <b>Star ⭐ if you want more</b><br>
 </p>
 
-Join here if you need help ! https://discord.gg/RHZkC3PAhJ
+Join here if you need help ! discord.gg/devcenter
 Also 250 star = release new one with x10 faster !
 
 ## Features
