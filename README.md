@@ -5,7 +5,8 @@
 </p>
 
 Join here if you need help ! discord.gg/devcenter
-Also 250 star = release new one with x10 faster !
+<br>Updated with working api must wait a little to get
+<br>Also i will release faster when i found more working api
 
 ## Features
 ```js
@@ -76,4 +77,4 @@ Also 250 star = release new one with x10 faster !
  > [![](https://cdn.discordapp.com/avatars/916040642369552414/a_1b5cc1dee6489570f593d1117a775fc7.gif?size=40)](https://github.com/wizz1337) <br>Xin1337 / Wizz1337 :
  <br>BTC : bc1q7qetejfa3q8ukkqcn3ct9fctcah34q2rlvvnl4
  <br>Telegram : xin1337w
- <br>Discord : https://discord.gg/RHZkC3PAhJ
+ <br>Discord : discord.gg/devcenter
