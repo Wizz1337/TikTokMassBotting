@@ -97,7 +97,7 @@ def clearURL(link):
     parsedURL = urlparse(link)
     host = parsedURL.hostname.lower()
     if "vm.tiktok.com" == host or "vt.tiktok.com" == host:
-        UrlParsed = urlparse(r.head(itemID, verify=False, allow_redirects=True, timeout=5).url)
+        UrlParsed = urlparse(r.head(link, verify=False, allow_redirects=True, timeout=5).url)
         return UrlParsed.path.split("/")[3]
     else:
         UrlParsed = urlparse(link)
