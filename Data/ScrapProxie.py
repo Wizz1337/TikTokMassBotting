@@ -69,7 +69,7 @@ class XProxy:
         'https://www.proxyscan.io/download?type=socks4',
         'https://www.proxyscan.io/download?type=socks5',
         'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt',
-        'https://github.com/TheSpeedX/PROXY-List/blob/master/socks4.txt',
+        'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt'
         'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt',
         'https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt',
         'https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt',
@@ -145,5 +145,5 @@ def Start():
     print(Colorate.Horizontal(Colors.red_to_purple, f"Length without duplicates : {len(clean_output)}"))
 
     print(Colorate.Horizontal(Colors.red_to_purple, f"Saved to Proxies.txt"))
-    p.file_write('./Data/Proxies.txt', clean_output)
+    p.file_write("./Data/Proxies.txt", clean_output)
     

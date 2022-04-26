@@ -1,6 +1,6 @@
 import os, sys
 
-def clearConsole():
+def clear_console():
     if os.name == 'posix':
         os.system('clear')
     elif os.name in ('ce', 'nt', 'dos'):
@@ -8,7 +8,7 @@ def clearConsole():
     else:
         pass
 
-def setConsoleTitle(Content):
+def set_console_title(Content):
     global DebugMode
     if os.name == 'posix':
         sys.stdout.write(f"\33]0;{Content}\a")
@@ -20,17 +20,17 @@ def setConsoleTitle(Content):
     else:
         pass
 
-def readFile(filename,method):
+def read_file(filename,method):
     with open(filename,method,encoding='utf8') as f:
         content = [line.strip('\n') for line in f]
         return content
 
-def readProxiesFile():
+def read_proxies_file():
     restartTry = True
-    path = "./Data/Proxies.txt"
+    path = os.path.join("Data", "Proxies.txt")
     while restartTry:
         try:
-            proxies = readFile(path, 'r')
+            proxies = read_file(path, 'r')
             restartTry = False
             return proxies
         except:
