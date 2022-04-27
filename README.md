@@ -19,7 +19,7 @@ Join here if you need help ! discord.gg/devcenter
 
 ## Installation
 ```
-  * pip install requests pystyle
+  * pip install requests pystyle==1.5
 ```
 
 ##  Usage:
