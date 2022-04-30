@@ -4,9 +4,9 @@
   <b>Star ⭐ if you want more</b><br>
 </p>
 
-Join here if you need help ! discord.gg/devcenter
-<br>Updated with working api must wait a little to get
-<br>Also i will release faster when i found more working api
+Join the [Discord](discord.gg/devcenter) if you need help or if you are a beginner programmer read this written guide ["How to use TikTokMassBotting Python Script"](https://my-tailwind-nextjs-starter-blog.vercel.app/blog/how-to-use-tiktokmassbotting-python-script-beginner-tutorial)
+<br>Updated with working API must wait a little to get
+<br>Also i will release faster when I found more working API
 
 ## Features
 ```js
@@ -36,7 +36,7 @@ Join here if you need help ! discord.gg/devcenter
 ```
 
 ## Tricks
-```js
+```
   * Use on vps (Faster !)
   * Run 3 times one with http proxy type, one with socks4 proxy type and same for socks5
 ```
