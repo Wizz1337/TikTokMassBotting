@@ -4,7 +4,7 @@
   <b>Star ⭐ if you want more</b><br>
 </p>
 
-Join the [Discord](discord.gg/devcenter) if you need help or if you are a beginner programmer read this written guide ["How to use TikTokMassBotting Python Script"](https://my-tailwind-nextjs-starter-blog.vercel.app/blog/how-to-use-tiktokmassbotting-python-script-beginner-tutorial)
+Join the https://Discord.gg/devcenter if you need help or if you are a beginner programmer read this written guide ["How to use TikTokMassBotting Python Script"](https://my-tailwind-nextjs-starter-blog.vercel.app/blog/how-to-use-tiktokmassbotting-python-script-beginner-tutorial)
 <br>Updated with working API must wait a little to get
 <br>Also i will release faster when I found more working API
 
