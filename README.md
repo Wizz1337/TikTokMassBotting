@@ -43,18 +43,18 @@ Join the https://Discord.gg/devcenter if you need help or if you are a beginner 
 
 ## Scammers
 ```js
-  * yezzjoestar#0001   | 923211134901841982    | Selling tool for 20E
+  * yezzjoestar#0001   | 923211134901841982    | Selling tool for 20€
   * Biloo#8484         | 963482748914384957    | Skid + Veski
   * Uhky#0001          | 955883575604019310    | Skid + Veski
   * ΞZIR#0001          | 962708528118767646    | Skid + Veski
-  * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20E (friend of yezzjoestar)
+  * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20€ (friend of yezzjoestar)
   * Luxs#0002          | 646941764032397313    | Skid + Selling tool for 20$
   * Krsxz#0001         | 954372342887378944    | Skid + Veski (Guild ID: 965193120700596244)
   * hz#3623            | 933330648373006406    | Skid + Veski (Guild ID: 960149739268112454)
   * 151k#6661          | 814508737745911878    | Skid & Selling
   * Lekkas#9751        | 938092182819176511    | Skid & Selling (Guild ID: 951470783077679104)
   * zrh#2000           | 840699051103617084    | Skid & Sellibng  (Guild ID: 940236490691182632)
-  * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5E
+  * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5€
   * Phenzy#0001        | 680050523776221207    | Skid
   * https://github.com/moxy-code/TikTok-Share-Bot
   * https://github.com/CrystalEU/ShareBot-Tiktok
