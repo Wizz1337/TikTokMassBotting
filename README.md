@@ -4,7 +4,7 @@
   <b>Star ⭐ if you want more</b><br>
 </p>
 
-Join the https://Discord.gg/devcenter if you need help or if you are a beginner programmer read this written guide ["How to use TikTokMassBotting Python Script"](https://my-tailwind-nextjs-starter-blog.vercel.app/blog/how-to-use-tiktokmassbotting-python-script-beginner-tutorial)
+Join the https://discord.gg/TU5za46d8h if you need help or if you are a beginner programmer read this written guide ["How to use TikTokMassBotting Python Script"](https://my-tailwind-nextjs-starter-blog.vercel.app/blog/how-to-use-tiktokmassbotting-python-script-beginner-tutorial)
 <br>Updated with working API must wait a little to get
 <br>Also i will release faster when I found more working API
 
@@ -39,37 +39,6 @@ Join the https://Discord.gg/devcenter if you need help or if you are a beginner 
 ```
   * Use on vps (Faster !)
   * Run 3 times one with http proxy type, one with socks4 proxy type and same for socks5
-```
-
-## Scammers
-```js
-  * yezzjoestar#0001   | 923211134901841982    | Selling tool for 20E
-  * Biloo#8484         | 963482748914384957    | Skid + Veski
-  * Uhky#0001          | 955883575604019310    | Skid + Veski
-  * ΞZIR#0001          | 962708528118767646    | Skid + Veski
-  * Xtro#0001          | 797801852833103912    | Skid + Selling tool for 20E (friend of yezzjoestar)
-  * Luxs#0002          | 646941764032397313    | Skid + Selling tool for 20$
-  * Krsxz#0001         | 954372342887378944    | Skid + Veski (Guild ID: 965193120700596244)
-  * hz#3623            | 933330648373006406    | Skid + Veski (Guild ID: 960149739268112454)
-  * 151k#6661          | 814508737745911878    | Skid & Selling
-  * Lekkas#9751        | 938092182819176511    | Skid & Selling (Guild ID: 951470783077679104)
-  * zrh#2000           | 840699051103617084    | Skid & Sellibng  (Guild ID: 940236490691182632)
-  * HugooMig#0001      | 939910195570688060    | Skid & Selling tool for 5E
-  * Phenzy#0001        | 680050523776221207    | Skid
-  * https://github.com/moxy-code/TikTok-Share-Bot
-  * https://github.com/CrystalEU/ShareBot-Tiktok
-  * https://github.com/zenty404/TikTok_Share_Bot
-  * https://github.com/gsventu/Tiktok-Share-Bot
-  * https://github.com/ladas2000/tiktok-sharebot | no Credit
-  * https://github.com/CrystalEU/Viewbot-Tiktok
-  * https://github.com/2wz/tiktok-shares-bot
-  * https://github.com/floppa1337/Tiktok-Sharebot
-  * https://github.com/dos-argenta/TikTokShareBot-SpiritOfStalker
-  * https://github.com/drezhack/TikTok-Shares
-  * https://github.com/KazamaOnGithub/TikTok_ShareBoost
-  * https://github.com/voxiq/tiktok-auto-share
-  
-  Thanks to github.com/b6m | github.com/00a1 for tracking these skids & scammers !
 ```
 
 ##  Credits:
