@@ -13,7 +13,7 @@ Join the https://discord.gg/TU5za46d8h if you need help or if you are a beginner
   * View botting
   * Share botting (not patched you can do a ton of share)
   * Easy to use, Fast
-  * Compatible Linux / Win / (didnt tested for macos)
+  * Compatible Linux / Win / (wasn't tested for MacOS)
   * Proxy Scrapper integrated
 ```
 
